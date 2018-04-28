@@ -12,6 +12,11 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/bnnnn"
@@ -20,15 +25,15 @@
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
         <activity
-            android:name="com.pivotsecurity.vpn.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.pivotsecurity.vpn.NewMainActivity"
+            android:name=".NewMainActivity"
             android:label=""
             android:theme="@style/Custom" />
         <activity
-            android:name="com.pivotsecurity.vpn.LoadingActivity"
+            android:name=".LoadingActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,55 +42,55 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.pivotsecurity.vpn.PrivateBrowsingActivity"
+            android:name=".PrivateBrowsingActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:label="@string/title_activity_browser"
-            android:parentActivityName="com.pivotsecurity.vpn.NewMainActivity"
+            android:parentActivityName=".NewMainActivity"
             android:theme="@style/BrowserTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.pivotsecurity.vpn.NewMainActivity" />
         </activity>
         <activity
-            android:name="com.pivotsecurity.vpn.SettingsActivity"
+            android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName="com.pivotsecurity.vpn.NewMainActivity"
+            android:parentActivityName=".NewMainActivity"
             android:theme="@style/BrowserTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.pivotsecurity.vpn.NewMainActivity" />
         </activity>
         <activity
-            android:name="com.pivotsecurity.vpn.ContactActivity"
+            android:name=".ContactActivity"
             android:label="@string/title_activity_contact"
-            android:parentActivityName="com.pivotsecurity.vpn.NewMainActivity"
+            android:parentActivityName=".NewMainActivity"
             android:theme="@style/Custom">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.pivotsecurity.vpn.NewMainActivity" />
         </activity>
         <activity
-            android:name="com.pivotsecurity.vpn.AboutUsActivity"
+            android:name=".AboutUsActivity"
             android:label="@string/title_activity_about_us"
-            android:parentActivityName="com.pivotsecurity.vpn.NewMainActivity"
+            android:parentActivityName=".NewMainActivity"
             android:theme="@style/Custom">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.pivotsecurity.vpn.NewMainActivity" />
         </activity>
         <activity
-            android:name="com.pivotsecurity.vpn.VpnServerListActivity"
+            android:name=".VpnServerListActivity"
             android:label="Choose VPN Server"
-            android:parentActivityName="com.pivotsecurity.vpn.NewMainActivity"
+            android:parentActivityName=".NewMainActivity"
             android:theme="@style/Custom">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.pivotsecurity.vpn.NewMainActivity" />
         </activity>
         <activity
-            android:name="com.pivotsecurity.vpn.FeedBackActivity"
+            android:name=".FeedBackActivity"
             android:label="@string/title_activity_feed_back"
-            android:parentActivityName="com.pivotsecurity.vpn.NewMainActivity"
+            android:parentActivityName=".NewMainActivity"
             android:theme="@style/Custom">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -115,16 +120,22 @@
         </service>
 
         <activity
-            android:name="com.pivotsecurity.vpn.VpnServerActivityList"
+            android:name=".VpnServerActivityList"
             android:label="@string/title_activity_vpn_server_list"
             android:theme="@style/Custom" />
-
-
         <activity
-            android:name="com.pivotsecurity.vpn.PrivacyPolicy"
+            android:name=".PrivacyPolicy"
             android:label="@string/title_activity_privacy_policy"
-            android:parentActivityName="com.pivotsecurity.vpn.NewMainActivity"
+            android:parentActivityName=".NewMainActivity"
             android:theme="@style/Custom">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pivotsecurity.vpn.NewMainActivity" />
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".NewMainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.pivotsecurity.vpn.NewMainActivity" />

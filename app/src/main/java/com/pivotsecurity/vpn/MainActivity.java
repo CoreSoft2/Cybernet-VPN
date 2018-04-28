@@ -2,6 +2,7 @@ package com.pivotsecurity.vpn;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -18,6 +19,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.pivotsecurity.vpn.R;
@@ -35,6 +38,8 @@ public class MainActivity extends AppCompatActivity
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private Button btnLogin;
+    private Button btnSignup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,23 @@ public class MainActivity extends AppCompatActivity
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
+        btnLogin = (Button) findViewById(R.id.btnlogin);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Intent = new Intent(view.getContext(), LoginActivity.class);
+                view.getContext().startActivity(Intent);
+            }
+        });
+        btnSignup = (Button) findViewById(R.id.btnsignup);
+        btnSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://www.pivotsecurity.com");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -71,8 +93,7 @@ public class MainActivity extends AppCompatActivity
                 // Handle Right navigation view item clicks here.
                 int id = item.getItemId();
 
-                if (id == R.id.navigation_home)
-                {
+                if (id == R.id.navigation_home) {
                     fragmentManager = getSupportFragmentManager();
                     fragmentTransaction = fragmentManager.beginTransaction();
                     MainFragment main = new MainFragment();
@@ -82,29 +103,15 @@ public class MainActivity extends AppCompatActivity
                 }
                 else if (id == R.id.navigation_dashboard) {
                     Toast.makeText(MainActivity.this, "Right Drawer - Logout", Toast.LENGTH_SHORT).show();
-                }
-
-                else if (id == R.id.browser)
-                {
-                   /* fragmentManager = getFragmentManager();
-                    fragmentTransaction = fragmentManager.beginTransaction();
-                    BowserFragment browser = new BowserFragment();
-                    fragmentTransaction.replace(R.id.frag, browser, "HELLO");
-                    fragmentTransaction.commit();
-                    */
+                } else if (id == R.id.browser){
                     Intent intent=new Intent(getApplicationContext(),BrowserActivity.class);
                     startActivity(intent);
-
                 }
-
-
                 return true;
             }
         });
 
-
     }
-
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -117,7 +124,6 @@ public class MainActivity extends AppCompatActivity
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
-
         public ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
@@ -142,8 +148,6 @@ public class MainActivity extends AppCompatActivity
             return mFragmentTitleList.get(position);
         }
     }
-
-
 
     @Override
     public void onBackPressed() {

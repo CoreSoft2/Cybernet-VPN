@@ -39,8 +39,6 @@
             android:textSize="22sp"
             />
 
-
-
             <be.appfoundry.progressbutton.ProgressButton
                 android:id="@+id/progressButton"
                 xmlns:progressbutton="http://schemas.android.com/apk/res-auto"
@@ -61,19 +59,28 @@
                 android:id="@+id/textview"
                 android:textStyle="bold"
                 android:text=""
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="50dp"
                 android:layout_gravity="center_horizontal"
                 android:textSize="25sp"
                 />
 
+            <Button
+                android:id="@+id/btnlogin"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:text="Login" />
+            <Button
+                android:id="@+id/btnsignup"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:text="Signup" />
+
         </LinearLayout>
-
-
-
-
     </android.support.v7.widget.CardView>
-
-
 
 </LinearLayout>
 </ScrollView>

@@ -27,7 +27,7 @@ public class PrivacyPolicy extends AppCompatActivity
 
         webv = (WebView) findViewById(R.id.privacy_webView);
         webv.setWebViewClient(new MyWeb1());
-        webv.loadUrl("https://www.pivotsecurity.com/terms");
+        webv.loadUrl("https://www.pivotsecurity.com/terms/");
     }
 
     class MyWeb1 extends WebViewClient

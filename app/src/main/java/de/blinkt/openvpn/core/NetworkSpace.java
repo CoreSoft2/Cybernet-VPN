@@ -7,7 +7,8 @@ package de.blinkt.openvpn.core;
 import android.os.Build;
 import android.support.annotation.NonNull;
 
-import com.cybernetvpn.cybernetvpn.BuildConfig;
+
+import com.pivotsecurity.vpn.BuildConfig;
 
 import junit.framework.Assert;
 

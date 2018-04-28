@@ -13,8 +13,9 @@ import android.os.ParcelFileDescriptor;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.cybernetvpn.cybernetvpn.BuildConfig;
-import com.cybernetvpn.cybernetvpn.R;
+
+import com.pivotsecurity.vpn.BuildConfig;
+import com.pivotsecurity.vpn.R;
 
 import junit.framework.Assert;
 
@@ -473,12 +474,14 @@ public class OpenVpnManagementThread implements Runnable, OpenVPNManagement {
         if (needed.equals("Private Key")) {
             pw = mProfile.getPasswordPrivateKey();
         } else if (needed.equals("Auth")) {
-            String usercmd = String.format("username '%s' %s\n", needed, VpnProfile.openVpnEscape(mProfile.mUsername));
+            //String usercmd = String.format("username '%s' %s\n", needed, VpnProfile.openVpnEscape(mProfile.mUsername));
+            String usercmd = String.format("username '%s' %s\n", needed, "gprasad8080");
             managmentCommand(usercmd);
             pw = mProfile.getPasswordAuth();
         }
         if (pw != null) {
-            String cmd = String.format("password '%s' %s\n", needed, VpnProfile.openVpnEscape(pw));
+            //String cmd = String.format("password '%s' %s\n", needed, VpnProfile.openVpnEscape(pw));
+            String cmd = String.format("password '%s' %s\n", needed, "GuruGuru22");
             managmentCommand(cmd);
         } else {
             VpnStatus.logError(String.format("Openvpn requires Authentication type '%s' but no password/key information available", needed));

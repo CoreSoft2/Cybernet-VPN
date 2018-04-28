@@ -16,7 +16,7 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Vector;
 
-import com.cybernetvpn.cybernetvpn.R;
+import com.pivotsecurity.vpn.R;
 import de.blinkt.openvpn.VpnProfile;
 
 public class VPNLaunchHelper {

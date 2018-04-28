@@ -48,8 +48,8 @@ import java.util.Vector;
 
 import de.blinkt.openvpn.DisconnectVPNActivity;
 
-import com.cybernetvpn.cybernetvpn.BuildConfig;
-import com.cybernetvpn.cybernetvpn.R;
+import com.pivotsecurity.vpn.BuildConfig;
+import com.pivotsecurity.vpn.R;
 import de.blinkt.openvpn.VpnProfile;
 import de.blinkt.openvpn.core.VpnStatus.ByteCountListener;
 import de.blinkt.openvpn.core.VpnStatus.ConnectionStatus;

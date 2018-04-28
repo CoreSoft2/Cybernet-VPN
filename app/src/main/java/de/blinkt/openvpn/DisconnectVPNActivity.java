@@ -17,7 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.cybernetvpn.cybernetvpn.R;
+import com.pivotsecurity.vpn.R;
 
 import de.blinkt.openvpn.core.OpenVPNService;
 import de.blinkt.openvpn.core.ProfileManager;

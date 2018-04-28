@@ -14,7 +14,7 @@ import android.net.NetworkInfo.State;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 
-import com.cybernetvpn.cybernetvpn.R;
+import com.pivotsecurity.vpn.R;
 
 import java.util.LinkedList;
 import de.blinkt.openvpn.core.VpnStatus.ByteCountListener;

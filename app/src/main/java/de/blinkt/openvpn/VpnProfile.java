@@ -18,7 +18,7 @@ import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Base64;
 
-import com.cybernetvpn.cybernetvpn.R;
+import com.pivotsecurity.vpn.R;
 
 import org.cybernet.util.io.pem.PemObject;
 import org.cybernet.util.io.pem.PemWriter;

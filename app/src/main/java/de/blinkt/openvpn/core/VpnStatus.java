@@ -8,7 +8,6 @@ import android.content.Context;
 import android.os.Build;
 import android.os.HandlerThread;
 import android.os.Message;
-import android.widget.EditText;
 
 import java.io.File;
 import java.io.PrintWriter;
@@ -17,8 +16,8 @@ import java.util.LinkedList;
 import java.util.Locale;
 import java.util.Vector;
 
-import com.cybernetvpn.cybernetvpn.MainFragment;
-import com.cybernetvpn.cybernetvpn.R;
+
+import com.pivotsecurity.vpn.R;
 
 public class VpnStatus {
     // keytool -printcert -jarfile de.blinkt.openvpn_85.apk

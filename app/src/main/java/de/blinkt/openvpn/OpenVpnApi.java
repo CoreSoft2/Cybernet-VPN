@@ -7,7 +7,7 @@ import android.os.Build;
 import android.os.RemoteException;
 import android.text.TextUtils;
 
-import com.cybernetvpn.cybernetvpn.R;
+import com.pivotsecurity.vpn.R;
 
 import java.io.IOException;
 import java.io.StringReader;

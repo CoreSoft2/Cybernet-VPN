@@ -13,7 +13,8 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.List;
 
-import com.cybernetvpn.cybernetvpn.R;
+
+import com.pivotsecurity.vpn.R;
 import de.blinkt.openvpn.VpnProfile;
 
 public class ProxyDetection {

@@ -9,16 +9,18 @@ android {
             storePassword 'store password'
         }
     }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
 
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.cybernetvpn.cybernetvpn"
-        minSdkVersion 16
-        targetSdkVersion 25
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode = 157
+        versionName = "0.7.4"
+        applicationId "com.pivotsecurity.vpn"
         versionCode 3
         versionName "1.1"
-        applicationId "com.cybernetvpn.cybernetvpn"
+        applicationId "com.pivotsecurity.vpn"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         //vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -61,4 +63,9 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.squareup.picasso:picasso:2.5.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}
+repositories {
+    maven {
+        url 'https://maven.google.com'
+    }
 }

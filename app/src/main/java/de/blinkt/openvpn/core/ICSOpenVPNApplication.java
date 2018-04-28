@@ -6,7 +6,7 @@ package de.blinkt.openvpn.core;
 
 import android.app.Application;
 
-import com.cybernetvpn.cybernetvpn.BuildConfig;
+import com.pivotsecurity.vpn.BuildConfig;
 
 
 /*

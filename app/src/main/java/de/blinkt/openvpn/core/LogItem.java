@@ -12,7 +12,7 @@ import android.content.pm.Signature;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.cybernetvpn.cybernetvpn.R;
+import com.pivotsecurity.vpn.R;
 
 import java.io.ByteArrayInputStream;
 import java.io.UnsupportedEncodingException;

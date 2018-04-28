@@ -8,7 +8,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 
-import com.cybernetvpn.cybernetvpn.R;
+
+import com.pivotsecurity.vpn.R;
 
 import java.io.BufferedInputStream;
 import java.io.File;

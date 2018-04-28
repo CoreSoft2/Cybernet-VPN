@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
-    tools:context="com.cybernetvpn.cybernetvpn.ContactActivityFragment"
+    tools:context="com.pivotsecurity.vpn.ContactActivityFragment"
     tools:showIn="@layout/activity_contact">
 
     <ImageView
@@ -73,7 +73,7 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cybernet VPN"
+        android:text="Pivot Security"
         android:textColor="#ffff"
         android:textSize="14sp"
         android:layout_below="@+id/imageView11"
@@ -95,7 +95,7 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Copyright © 2017 CyberNet"
+        android:text="Copyright © 2017 Pivot Security"
         android:textColor="#ffff"
         android:textSize="14sp"
         android:layout_centerHorizontal="true"

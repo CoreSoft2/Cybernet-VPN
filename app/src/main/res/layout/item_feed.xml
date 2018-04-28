@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/delete" />
 
-        <com.cybernetvpn.cybernetvpn.SquaredFrameLayout
+        <com.pivotsecurity.vpn.SquaredFrameLayout
             android:id="@+id/vImageRoot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -31,7 +31,7 @@
                 android:scaleType="centerCrop" />
 
 
-        </com.cybernetvpn.cybernetvpn.SquaredFrameLayout>
+        </com.pivotsecurity.vpn.SquaredFrameLayout>
 
         <ImageView
             android:id="@+id/ivFeedBottom"

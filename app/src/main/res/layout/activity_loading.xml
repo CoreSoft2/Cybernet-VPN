@@ -6,7 +6,7 @@
     android:id="@+id/cont"
     android:layout_height="match_parent"
     android:background="#ffff"
-    tools:context="com.cybernetvpn.cybernetvpn.LoadingActivity">
+    tools:context="com.pivotsecurity.vpn.LoadingActivity">
 
     <com.romainpiel.shimmer.ShimmerTextView
         android:id="@+id/textView3"

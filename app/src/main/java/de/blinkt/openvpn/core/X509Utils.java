@@ -34,7 +34,8 @@ import java.util.Vector;
 
 import javax.security.auth.x500.X500Principal;
 
-import com.cybernetvpn.cybernetvpn.R;
+
+import com.pivotsecurity.vpn.R;
 import de.blinkt.openvpn.VpnProfile;
 
 public class X509Utils {

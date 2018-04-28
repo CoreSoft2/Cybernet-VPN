@@ -7,7 +7,7 @@
     android:layout_marginTop="20dp"
     android:layout_marginLeft="20dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.cybernetvpn.cybernetvpn.VpnServerActivityList"
+    tools:context="com.pivotsecurity.vpn.VpnServerActivityList"
     tools:showIn="@layout/activity_vpn_server_list2">
 
     <TextView

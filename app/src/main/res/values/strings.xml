@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CyberNet VPN</string>
+    <string name="app_name">Pivot Security</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -15,11 +15,9 @@
     <string name="title_activity_main_bottom">MainBottomActivity</string>
     <string name="browser">Browser</string>
     <string name="apimap">AIzaSyCOKhLMvn1jigOEx2O2z9mBMqnVjfXLaKk</string>
-    <string name="user_profile_photo">http://akash-deep.in/bv2.png</string>
+    <string name="user_profile_photo"></string>
     <string name="ipd">The IP Address is a unique address that computing devices such as
     personal computers, tablets, and smartphones use to identify itself and communicate with other devices in the IP network.
-
-
 </string>
 
     <string name="new_message_notification_title_template">New message: %1$s</string>
@@ -127,11 +125,11 @@
     <string name="title_activity_about">About</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="cybernet_vpn">CyberNet VPN</string>
+    <string name="cybernet_vpn">Pivot Security</string>
     <string name="need_help_please_reachout_to_us">Need Help? Please reachout to us.</string>
     <string name="all_rights_reserved">All rights reserved</string>
-    <string name="contact_cybernetvpn_com">contact@cybernetvpn.com</string>
-    <string name="www_cybernetvpn_com">www.cybernetvpn.com</string>
+    <string name="contact_cybernetvpn_com">support@pivotsecurity.com</string>
+    <string name="www_cybernetvpn_com">www.pivotsecurity.com</string>
     <string name="email">Email</string>
     <string name="name">Name</string>
     <string name="submit">Submit</string>
@@ -172,7 +170,7 @@
     <string name="getproxy_error">proxy error</string>
     <string name="using_proxy">proxy</string>
     <string name="minidump_generated">VPN</string>
-    <string name="notifcation_title">Cybernet</string>
+    <string name="notifcation_title">Pivot Security</string>
     <string name="session_ipv4string">%1$s - %2$s</string>
     <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
     <string name="state_connecting">Connecting</string>
@@ -193,9 +191,9 @@
     <string name="statusline_bytecount">↓%2$s/s %1$s - ↑%4$s/s %3$s</string>
     <string name="notifcation_title_notconnect">Not connected</string>
     <string name="jelly_keystore_alphanumeric_bug">bug</string>
-    <string name="built_by">Cybernet</string>
-    <string name="debug_build">Cybernet</string>
-    <string name="official_build">Cybernet</string>
+    <string name="built_by">PivotSecurity</string>
+    <string name="debug_build">PivotSecurity</string>
+    <string name="official_build">PivotSecurity</string>
     <string name="screenoff_pause">Screen pause: %1$s</string>
     <string name="screen_nopersistenttun">scrren nop</string>
     <string name="pauseVPN">Pause protection</string>
@@ -207,8 +205,8 @@
     <string name="unhandled_exception">Exception： %1$s\n\n%2$s</string>
     <string name="unhandled_exception_context">%3$s: %1$s\n\n%2$s</string>
     <string name="ip_looks_like_subnet">subnet</string>
-    <string name="allowed_vpn_apps_info">Cybernet： %1$s</string>
-    <string name="disallowed_vpn_apps_info">Cybernet：%1$s</string>
+    <string name="allowed_vpn_apps_info">PivotSecurity： %1$s</string>
+    <string name="disallowed_vpn_apps_info">PivotSecurity：%1$s</string>
     <string name="app_no_longer_exists">No exist %s</string>
     <string name="remote_no_server_selected">No server found</string>
     <string name="ignore_multicast_route">ignore m route</string>

@@ -1,23 +1,30 @@
 package com.pivotsecurity.vpn;
+import android.app.Dialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 
 import de.blinkt.openvpn.core.OpenVPNService;
+
+import android.net.Uri;
 import android.net.VpnService;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.telecom.ConnectionService;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.pivotsecurity.vpn.R;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,6 +43,11 @@ public class MainFragment extends Fragment
     String ip, city, state,country, isp;
     JSONObject jsonObject;
     Button secure;
+    private Button btnLogin;
+    private Button btnSignup;
+    private Button btnLogout;
+    private TextView username;
+    private EditText password;
     boolean isFirst;
     boolean st;
     protected ConnectionService _connectionService;
@@ -74,20 +86,41 @@ public class MainFragment extends Fragment
         progressButton.setAnimationDelay(5);
         progressButton.setStartDegrees(270);
 
+        btnSignup = (Button) view.findViewById(R.id.btnSignup);
+        btnLogin = (Button) view.findViewById(R.id.btnLogin);
+        username = (TextView) view.findViewById(R.id.username);
+        password = (EditText) view.findViewById(R.id.password);
+        btnLogout = (Button) view.findViewById(R.id.btnLogout);
+
+
         MyAs myAs=new MyAs();
         myAs.execute();
 
         st = VpnStatus.isVPNActive();
-        if (VpnStatus.isVPNActive()==true)
-        {
+        if (VpnStatus.isVPNActive()==true) {
             progressButton.setIcon(getResources().getDrawable(R.drawable.sk));
             progressButton.setColor(Color.WHITE);
             progressButton.stopAnimating();
             progressButton.setStrokeColor(Color.GREEN);
-        }
+            setVisibulity(true);
+        }else{
+            setVisibulity(false);
+            btnLogin.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-        else
-        {
+                    Log.d("Main View", " Login pressed..... ");
+
+                }
+            });
+            btnSignup.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Uri uri = Uri.parse("https://www.pivotsecurity.com");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }
+            });
         }
 
         sharedPreferences = getActivity().getSharedPreferences("is_first", MODE_PRIVATE);
@@ -149,10 +182,7 @@ public class MainFragment extends Fragment
                         }
                         New1 n = new New1();
                         n.start();
-                }
-                //st=VpnStatus.isVPNActive();
-                else if (VpnStatus.isVPNActive() == true)
-                {
+                } else if (st == true) {
                     progressButton.setIcon(getResources().getDrawable(R.drawable.sk));
                     progressButton.setColor(getResources().getColor(R.color.colorPrimary));
                     progressButton.setIcon(getResources().getDrawable(R.drawable.bnnn));
@@ -200,13 +230,28 @@ public class MainFragment extends Fragment
                 br.readLine();
                 de.blinkt.openvpn.OpenVpnApi.startVpn(getActivity(), config, null, null);
             Log.d("Main Activity","Connection Successful ..");
+            setVisibulity(true);
 
         }
         catch (IOException | RemoteException e) {
             e.printStackTrace();
         }
     }
-
+    private void setVisibulity(boolean bStatus){
+        if (bStatus){
+            btnLogin.setVisibility(View.GONE);
+            btnSignup.setVisibility(View.GONE);
+            username.setVisibility(View.GONE);
+            password.setVisibility(View.GONE);
+            btnLogout.setVisibility(View.VISIBLE);
+        }else{
+            btnLogin.setVisibility(View.VISIBLE);
+            btnSignup.setVisibility(View.VISIBLE);
+            username.setVisibility(View.VISIBLE);
+            password.setVisibility(View.VISIBLE);
+            btnLogout.setVisibility(View.GONE);
+        }
+    }
 
 
     class MyAs extends AsyncTask<String, Void, String> {
